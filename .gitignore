@@ -103,7 +103,7 @@ Desktop.ini
 /bin/**
 /spring_loaded/**
 /deploy/**
-
+/src/main/webapp/bowe_components/**
 ######################
 # Logs
 ######################
