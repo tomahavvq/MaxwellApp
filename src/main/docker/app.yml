@@ -1,0 +1,15 @@
+version: '2'
+services:
+    maxwellapp-app:
+        image: maxwellapp
+        external_links:
+            - maxwellapp-mysql:mysql
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod
+            - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/maxwellapp?useUnicode=true&characterEncoding=utf8&useSSL=false
+        ports:
+            - 8081:8081
+    maxwellapp-mysql:
+        extends:
+            file: mysql.yml
+            service: maxwellapp-mysql

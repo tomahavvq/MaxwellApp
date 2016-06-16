@@ -1,0 +1,99 @@
+// URL: http://10.0.0.10:8080/api/training/{id} GET
+{
+  "id": 1,
+  "trainingDate": "2004-01-04",
+  "name": "test",
+  "exersiseDTOList": [
+    {
+      "id": 1,
+      "repeatation": 10,
+      "series": 10,
+      "weight": 10,
+      "exerciseId": 1,
+      "name": "KLATA",
+      "description": "KLATA",
+      "bodyPart": "KLATKA",
+      "done": true
+    },
+    {
+      "id": 2,
+      "repeatation": 10,
+      "series": 10,
+      "weight": 10,
+      "exerciseId": 2,
+      "name": "KLATA2",
+      "description": "KLATA2",
+      "bodyPart": "KLATKA",
+      "done": true
+    }
+  ],
+  "userId": 1,
+  "done": true
+}
+//URL: http://10.0.0.10:8080/api/training POST
+{
+  "trainingDate": "2004-01-04",
+  "name": "test",
+  "exersiseDTOList": [
+    {
+      "repeatation": 10,
+      "series": 10,
+      "weight": 10,
+      "exerciseId": 1,
+      "name": "KLATA",
+      "description": "KLATA",
+      "bodyPart": "KLATKA",
+      "done": true
+    },
+    {
+      "repeatation": 10,
+      "series": 10,
+      "weight": 10,
+      "exerciseId": 2,
+      "name": "KLATA2",
+      "description": "KLATA2",
+      "bodyPart": "KLATKA",
+      "done": true
+    }
+  ],
+  "done": true
+}
+
+//URL: http://10.0.0.10:8080/api/training/{id} DELETE
+// nic nie wysylamy
+
+//URL: http://10.0.0.10:8080/api/training/{id} PUT
+{
+  "id": 1,
+  "trainingDate": "2004-01-04",
+  "name": "test",
+  "exersiseDTOList": [
+    {
+      "id": 1,
+      "repeatation": 10,
+      "series": 10,
+      "weight": 10,
+      "exerciseId": 1,
+      "name": "KLATA",
+      "description": "KLATA",
+      "bodyPart": "KLATKA",
+      "done": false
+    },
+    {
+      "id": 2,
+      "repeatation": 10,
+      "series": 10,
+      "weight": 10,
+      "exerciseId": 2,
+      "name": "KLATA2",
+      "description": "KLATA2",
+      "bodyPart": "KLATKA",
+      "done": false
+    }
+  ],
+  "userId": 1,
+  "done": true
+}
+
+
+// URL http://10.0.0.10:8080/api/training//{userId}/active GET tylko nowe treiningi
