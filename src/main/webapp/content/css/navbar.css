@@ -6,6 +6,7 @@
     z-index: 1000;
     position: fixed;
     top: 0;
+    width:100%;
     box-shadow: 0 0 5px 1px #000;
     border: none;
     border-radius: 0;
@@ -19,9 +20,9 @@
 
 /* Logo */
 .navbar-brand {
+    padding-top:5px;
     float: left;
     height: 50px;
-    padding: 0;
     font-size: 12px;
     line-height: 50px;
 }
@@ -29,8 +30,8 @@
 .navbar-brand img {
     border-radius: 50%;
     float: left;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 }
 
 .navbar-brand h3 {
@@ -120,7 +121,14 @@
     color:grey;
 }
 
+.navbar-collapse ul > li > a {
+    background-color:transparent !important;
 
+}
+.navbar-collapse ul > li > a {
+    border-bottom:none;
+
+}
 /* --- RESPONSIVE CSS --- */
 
 @media (max-width: 992px) {

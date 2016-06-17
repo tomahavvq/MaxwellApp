@@ -1,0 +1,159 @@
+<div ng-controller="calculatorController as calc" >
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 ">
+        <nav class="navbar navbar-inverse calc-submenu">
+            <ul class="nav navbar-nav">
+                    <li>
+                        <a ng-class="{active:isChosen(1)}" ng-click="choseCalc(1)">
+                            BMI Calculator
+                        </a>
+                    </li>
+                    <li>
+                        <a ng-class="{active:isChosen(2)}" ng-click="choseCalc(2)">
+                            Daily water intake
+                        </a>
+                    </li>
+                    <li>
+                        <a ng-class="{active:isChosen(3)}" ng-click="choseCalc(3)">
+                            Waist Hip Ratio
+                        </a>
+                    </li>
+                    <li>
+                        <a ng-class="{active:isChosen(4)}" ng-click="choseCalc(4)">
+                            Ideal Weight
+                        </a>
+                    </li>
+                    <li>
+                        <a ng-class="{active:isChosen(5)}" ng-click="choseCalc(5)">
+                            Daily kilocalorie requirement
+                        </a>
+                    </li>
+                    <li>
+                        <a ng-class="{active:calc.isChosen(6)}" ng-click="choseCalc(6)">
+                            Recommended protein intake
+                        </a>
+                    </li>
+            </ul>
+        </nav>
+    </div>
+
+
+
+</div>
+<div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="calc-content">
+        <div ng-show="isChosen(1)">
+            <h2>Calculate your BMI</h2>
+                <form>
+                <p>Height (cm): <input class="text-field" type="text" ng-model="height"></p>
+                <p>Weight (kg): <input class="text-field" type="text" ng-model="weight"></p>
+                <p><input class="text-field" type="submit" value="Calculate" ng-click="calcBMI(height, weight)"></p>
+                </form>
+                <h3>Result:</h3>
+                <h3>{{bmi | number:2}}</h3>
+                <h3>{{comment}}</h3>
+
+        </div>
+        <div ng-show="isChosen(2)">
+            <h2>Calculate  daily water intake</h2>
+                <form>
+                <p>Weight (kg): <input class="text-field" type="text" ng-model="wweight"></p>
+                <p><input class="text-field" type="submit" value="Calculate" ng-click="calcWater(wweight)"></p>
+                </form>
+                <h3>Result:</h3>
+                <p>{{"You have to drink " + water + " ml of water per day"}}</p>
+
+        </div>
+        <div ng-show="isChosen(3)">
+            <h2>Calculate Waist-Hip ratio</h2>
+                <form>
+                <p>Gender:
+                    <select class="text-field" name="singleSelect" ng-model ="sex">
+                        <option class="text-field" value="w">Woman</option>
+                        <option class="text-field" value="m">Man</option>
+                    </select>
+                </p>
+                </form>
+                <p>Waist (cm): <input class="text-field" type="text" ng-model="waist"></p>
+                <p>Hip (cm): <input class="text-field" type="text" ng-model="hip"></p>
+                <p><input class="text-field" type="submit" value="Calculate" ng-click="calcWHR(waist, hip, sex)"></p>
+                <h3>Result:</h3>
+                <h3>{{whr | number:2}}</h3>
+                <h3>{{comment}}</h3>
+
+        </div>
+        <div ng-show="isChosen(4)">
+            <h2>Calculate ideal weight</h2>
+
+            <form>
+                <p>Gender:
+                <select class="text-field" name="singleSelect" ng-model ="sex">
+                    <option class="text-field" value="w">Woman</option>
+                    <option class="text-field" value="m">Man</option>
+                </select>
+                </p>
+            <p>Height (cm): <input class="text-field" type="text" ng-model="iheight"></p>
+            <p><input class="text-field" type="submit" value="Calculate" ng-click="calcIdeal(iheight, sex)"></p>
+            </form>
+            <h3>Result:</h3>
+            <p>{{"Your ideal weight equals to " + idealW + " kg"}}</p>
+        </div>
+        <div ng-show="isChosen(5)">
+            <h2>Calculate daily kilocalorie requirement</h2>
+
+
+        </div>
+        <div ng-show="isChosen(6)">
+            <h2>Calculate daily            protein requirement</h2>
+            <form>
+                <p>Activity:
+
+                    <select class="text-field" name ="activitySelect" ng-model = "activity">
+                        <option class ="text-field" value="1">None</option>
+                        <option class ="text-field" value="2">Daily Training</option>
+                        <option class ="text-field" value="3">Intense Training</option>
+                    </select>
+                </p>
+                <p>Weight (kg): <input class="text-field" type="text" ng-model="pweight"></p>
+                <p><input class="text-field" type="submit" value="Calculate" ng-click="calcRecomProt(activity,pweight)"></p>
+                <h3>Result:</h3>
+                <p>{{"You have to eat " + proteins + " g of proteins per day"}}</p>
+            </form>
+        </div>
+        </div>
+    </div>
+    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+        <div class="calc-content">
+            <h2>About:</h2>
+            <div ng-show="isChosen(1)">
+                The body mass index (BMI) or Quetelet index is a value derived from the mass (weight) and height of an individual.
+                The BMI is defined as the body mass divided by the square of the body height, and is universally
+                expressed in units of kg/m2, resulting from mass in kilograms and height in metres.
+            </div>
+            <div ng-show="isChosen(2)">
+                Water is your body's principal chemical component and makes up about 60 percent of your body weight. Every system in your body depends on water. For example, water flushes toxins out of vital organs, carries nutrients to your cells, and provides a moist environment for ear, nose and throat tissues.
+                Lack of water can lead to dehydration, a condition that occurs when you don't have enough water in your body to carry out normal functions. Even mild dehydration can drain your energy and make you tired.
+                <h4>How much water do you need?</h4>
+                Every day you lose water through your breath, perspiration, urine and bowel movements. For your body to function properly, you must replenish its water supply by consuming beverages and foods that contain water.
+                So how much fluid does the average, healthy adult living in a temperate climate need? The Institute of Medicine determined that an adequate intake (AI) for men is roughly about 13 cups (3 liters) of total beverages a day. The AI for women is about 9 cups (2.2 liters) of total beverages a day.
+            </div>
+            <div ng-show="isChosen(3)">
+
+            </div>
+            <div ng-show="isChosen(4)">
+
+            </div>
+            <div ng-show="isChosen(5)">
+
+            </div>
+            <div ng-show="isChosen(6)">
+
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+

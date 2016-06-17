@@ -1,6 +1,15 @@
-<nav class="navbar navbar-default" role="navigation">
+<div class="container-fluid">
+<div class="row">
+<nav class="navbar navbar-default navbar-maxwell" role="navigation">
     <div class="container">
         <div class="navbar-collapse" uib-collapse="vm.isNavbarCollapsed" ng-switch="vm.isAuthenticated()">
+            <div class="navbar-header">
+                <a class="navbar-brand " href="#">
+                    <img ui-sref='home' alt="Maxwell Image" src="../../../content/images/maxwell.png"/>
+                </a>
+            </div>
+
+
             <ul class="nav navbar-nav navbar-right">
                 <li ui-sref-active="active">
                     <a ui-sref="home" ng-click="vm.collapseNavbar()">
@@ -121,3 +130,5 @@
         </div>
     </div>
 </nav>
+</div>
+</div>
