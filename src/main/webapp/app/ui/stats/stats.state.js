@@ -18,8 +18,8 @@
             views: {
                 'content@': {
                     templateUrl: 'app/ui/stats/stats.html',
-                    controller: 'statsControllers',
-                    controllerAs: 'statsds'
+                    controller: 'StatsController',
+                    controllerAs: 'stats'
                 }
             }
         });
