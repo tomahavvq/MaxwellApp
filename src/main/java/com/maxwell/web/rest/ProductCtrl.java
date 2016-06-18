@@ -15,7 +15,7 @@ import javax.inject.Inject;
  * Created by matexo on 22.05.16.
  */
 @RestController
-@RequestMapping(value="api/product")
+@RequestMapping(value="/api/product")
 public class ProductCtrl {
 
     @Inject

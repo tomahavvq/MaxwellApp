@@ -14,7 +14,7 @@ import java.util.List;
  * Created by matexo on 21.05.16.
  */
 @RestController
-@RequestMapping(value = "api/training")
+@RequestMapping(value = "/api/training")
 public class TrainingCtrl {
 
     @Inject

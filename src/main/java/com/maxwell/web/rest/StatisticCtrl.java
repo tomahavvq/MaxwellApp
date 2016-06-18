@@ -16,7 +16,7 @@ import javax.inject.Inject;
  * Created by pysiek on 12.06.16.
  */
 @RestController
-@RequestMapping("api/statistic")
+@RequestMapping("/api/statistic")
 public class StatisticCtrl {
 
     @Inject

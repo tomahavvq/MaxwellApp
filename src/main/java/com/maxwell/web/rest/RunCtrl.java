@@ -13,7 +13,7 @@ import javax.inject.Inject;
  * Created by tomahavvq on 14.05.16.
  */
 @RestController
-@RequestMapping("api/run")
+@RequestMapping("/api/run")
 public class RunCtrl {
 
     @Inject
