@@ -19,7 +19,7 @@ public class RunCtrl {
     @Inject
     private RunService runService;
 
-    @RequestMapping(value = "/run/{userId}",
+    @RequestMapping(value = "/user/{userId}",
             method = RequestMethod.POST)
     public ResponseEntity<?> savRun(@RequestBody RunDTO runDTO, @PathVariable Long userId) {
         return runService.saveRun(runDTO, userId)
@@ -27,7 +27,7 @@ public class RunCtrl {
                 .orElse(new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR));
     }
 
-    @RequestMapping(value = "/run/{runId}",
+    @RequestMapping(value = "/{runId}",
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<RunDTO> getRunDto(@PathVariable Long runId) {

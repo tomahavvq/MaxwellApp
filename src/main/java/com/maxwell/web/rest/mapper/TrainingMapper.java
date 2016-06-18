@@ -43,7 +43,7 @@ public class TrainingMapper {
             exersiseDTO.setWeight(ed.getWeight());
 
             Exercise exercise = ed.getExercise();
-            exersiseDTO.setBodyPart(exercise.getBodyPart().toString());
+            exersiseDTO.setBodyPart(exercise.getBodyPart().getDescription());
             exersiseDTO.setDescription(exercise.getDescription());
             exersiseDTO.setName(exercise.getName());
             exersiseDTO.setExerciseId(exercise.getId());

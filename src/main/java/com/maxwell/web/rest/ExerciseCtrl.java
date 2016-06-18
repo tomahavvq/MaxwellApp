@@ -15,7 +15,7 @@ import java.util.List;
  * Created by matexo on 21.05.16.
  */
 @RestController
-@RequestMapping(value = "api/exercise")
+@RequestMapping(value = "/api/exercise")
 public class ExerciseCtrl {
 
     @Inject
@@ -34,12 +34,11 @@ public class ExerciseCtrl {
         return new ResponseEntity<>( exerciseService.getAllExercise() , HttpStatus.OK);
     }
 
-    // TODO do modyfikacji w pozniejszym czasie
-    @RequestMapping(value = "/{bodyPart}")
-    public List<Exercise> getAllExercisesByBodyPart(@PathVariable String bodyPart) {
-        // cos zrobic z wyjatkiem(najprawdopodobniej zamiana na tabele slownikowa)
-        BodyPart bp = BodyPart.valueOf(bodyPart);
-        return exerciseService.getExerciseByBodyPart(bp);
+    @RequestMapping(value = "/bodyPart/{bodyPartDescription}")
+    public List<Exercise> getAllExercisesByBodyPart(@PathVariable String bodyPartDescription) {
+        BodyPart bodyPart = new BodyPart();
+        bodyPart.setDescription(bodyPartDescription);
+        return exerciseService.getExerciseByBodyPart(bodyPart);
     }
 
     @RequestMapping(value = "/{exerciseId}" , method = RequestMethod.GET)

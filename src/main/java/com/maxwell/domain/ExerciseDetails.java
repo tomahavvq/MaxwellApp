@@ -10,23 +10,28 @@ import java.io.Serializable;
  */
 
 @Entity
-@Table
+@Table(name = "exercise_details")
 public class ExerciseDetails implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private Long id;
 
     @NotNull
     @Min(0)
+    @Column(name = "repeatation")
     private Integer repeatation;
     @NotNull
     @Min(0)
+    @Column(name = "series")
     private Integer series;
     @NotNull
     @Min(0)
+    @Column(name = "weight")
     private Integer weight;
     @NotNull
+    @Column(name = "is_done")
     private Boolean isDone = Boolean.FALSE;
 
     @ManyToOne

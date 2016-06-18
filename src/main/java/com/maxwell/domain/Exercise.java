@@ -15,17 +15,21 @@ public class Exercise implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="id")
     private Long id;
 
     @NotNull
     @Size(min = 5 , max = 100)
+    @Column(name="exercise_name")
     private String exerciseName;
 
     @NotNull
     @Size(min = 5 , max = 4096)
+    @Column(name="description")
     private String description;
 
-    @Enumerated(EnumType.STRING)
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL )
+    @JoinColumn(name = "id_part_description")
     private BodyPart bodyPart;
 
     public Long getId() {

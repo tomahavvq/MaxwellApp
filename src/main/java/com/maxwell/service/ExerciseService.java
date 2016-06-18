@@ -28,7 +28,7 @@ public class ExerciseService {
     }
 
     public List<Exercise> getExerciseByBodyPart(BodyPart bodyPart){
-        Iterable<Exercise> exercises = exerciseRepository.findAll(QExercise.exercise.bodyPart.eq(bodyPart));
+        Iterable<Exercise> exercises = exerciseRepository.findAll(QExercise.exercise.bodyPart.description.eq(bodyPart.getDescription()));
         return Lists.newArrayList(exercises.iterator());
     }
 

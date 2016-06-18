@@ -14,13 +14,17 @@ public abstract class AbstractTrainingEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="id")
     private Long id;
 
+    @Column(name="duration")
     private Integer duration;
 
     @DateTimeFormat
+    @Column(name="date_time")
     private Date dateTime;
 
+    @Column(name="name")
     private String name;
 
     @ManyToOne

@@ -14,23 +14,29 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private Long id;
 
     @NotNull
+    @Column(name = "product_name")
     private String productName;
 
     //100g
     @Min(0)
     @NotNull
+    @Column(name = "carbohydrates")
     private Double carbohydrates;
     @Min(0)
     @NotNull
+    @Column(name = "protein")
     private Double protein;
     @Min(0)
     @NotNull
+    @Column(name = "fat")
     private Double fat;
     @Min(0)
     @NotNull
+    @Column(name = "kcal")
     private Double kcal;
 
     public Double getKcal() {

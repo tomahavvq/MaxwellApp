@@ -12,6 +12,7 @@ import java.util.List;
 public class Training extends AbstractTrainingEntity{
 
     @NotNull
+    @Column(name="is_done")
     private Boolean isDone = Boolean.FALSE;
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "training")

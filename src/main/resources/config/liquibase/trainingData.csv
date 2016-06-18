@@ -1,4 +1,4 @@
-user_id,time,date,is_done,is_strength
-3,00:45:03,2008-01-01 00:00:01,true,false
-3,00:45:03,2008-01-01 00:00:01,false,false
-4,00:45:03,2008-01-01 00:00:01,true,false
+user_id,duration,date_time,is_done,name
+3,122222,2008-01-01 00:00:01,true,test
+3,123145,2008-01-01 00:00:01,false,KLATA
+4,12415,2008-01-01 00:00:01,true,KLATAETS
