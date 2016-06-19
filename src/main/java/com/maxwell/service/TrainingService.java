@@ -97,6 +97,7 @@ public class TrainingService {
             exerciseDetails = exerciseDetailsRepository.save(exerciseDetails);
             exerciseDetailsList.add(exerciseDetails);
         }
+        training.setExercises(exerciseDetailsList);
         training.setUser(userRepository.getOne(userId));
         return Optional.of(trainingRepository.save(training));
     }
