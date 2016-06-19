@@ -1,6 +1,8 @@
 package com.maxwell.service;
 
 import com.maxwell.domain.*;
+import com.maxwell.domain.QRun;
+import com.maxwell.domain.QTraining;
 import com.maxwell.repository.RunRepository;
 import com.maxwell.repository.TrainingRepository;
 import com.maxwell.web.rest.dto.StatisticDTO;

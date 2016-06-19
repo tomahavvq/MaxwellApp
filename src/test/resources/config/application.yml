@@ -38,6 +38,8 @@ spring:
             enabled: false
     thymeleaf:
         mode: XHTML
+    profiles:
+      active: prod
 
 liquibase:
     contexts: test
