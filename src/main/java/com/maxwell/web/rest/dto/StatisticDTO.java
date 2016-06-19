@@ -1,8 +1,6 @@
 package com.maxwell.web.rest.dto;
 
 
-import com.maxwell.domain.Exercise;
-
 import java.util.Map;
 
 /**
@@ -15,8 +13,8 @@ public class StatisticDTO {
     private Integer sumOfWeight;
     private Integer runDistance;
     private Integer runDuration;
-    private Map<Exercise, Integer> sumOfAllDoneExercises;
-    private Map<Exercise, Integer> sumOfAllExercises;
+    private Map<Long, Integer> sumOfAllDoneExercises;
+    private Map<Long, Integer> sumOfAllExercises;
     private Double averageRunPace;
 
     public Long getUserId() {
@@ -27,11 +25,11 @@ public class StatisticDTO {
         this.userId = userId;
     }
 
-    public Map<Exercise, Integer> getSumOfAllExercises() {
+    public Map<Long, Integer> getSumOfAllExercises() {
         return sumOfAllExercises;
     }
 
-    public void setSumOfAllExercises(Map<Exercise, Integer> sumOfAllExercises) {
+    public void setSumOfAllExercises(Map<Long, Integer> sumOfAllExercises) {
         this.sumOfAllExercises = sumOfAllExercises;
     }
 
@@ -75,11 +73,11 @@ public class StatisticDTO {
         this.runDuration = runDuration;
     }
 
-    public Map<Exercise, Integer> getSumOfAllDoneExercises() {
+    public Map<Long, Integer> getSumOfAllDoneExercises() {
         return sumOfAllDoneExercises;
     }
 
-    public void setSumOfAllDoneExercises(Map<Exercise, Integer> sumOfAllDoneExercises) {
+    public void setSumOfAllDoneExercises(Map<Long, Integer> sumOfAllDoneExercises) {
         this.sumOfAllDoneExercises = sumOfAllDoneExercises;
     }
 
