@@ -1,4 +1,6 @@
 user_id,duration,date_time,is_done,name
 3,122222,2008-01-01 00:00:01,true,test
 3,123145,2008-01-01 00:00:01,false,KLATA
+3,32425,2008-01-01 00:00:01,false,TEST1
+3,1231231,2008-01-01 00:00:01,false,TEST2
 4,12415,2008-01-01 00:00:01,true,KLATAETS
