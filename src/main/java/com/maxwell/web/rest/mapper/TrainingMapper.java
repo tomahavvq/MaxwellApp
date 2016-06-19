@@ -28,6 +28,7 @@ public class TrainingMapper {
         trainingDTO.setTrainingDate(training.getDateTime());
         trainingDTO.setUserId(training.getUser().getId());
         trainingDTO.setName(training.getName());
+        trainingDTO.setDuration(training.getDuration());
         return trainingDTO;
     }
 

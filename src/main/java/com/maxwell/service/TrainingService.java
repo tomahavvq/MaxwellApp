@@ -82,6 +82,8 @@ public class TrainingService {
         Training training = new Training();
         training.setDone(trainingDTO.getDone());
         training.setDateTime(trainingDTO.getTrainingDate());
+        training.setUser(userRepository.getOne(userId));
+        training.setDuration(trainingDTO.getDuration());
         training = trainingRepository.save(training);
 
         List<ExerciseDetails> exerciseDetailsList = new ArrayList<>();
@@ -98,7 +100,6 @@ public class TrainingService {
             exerciseDetailsList.add(exerciseDetails);
         }
         training.setExercises(exerciseDetailsList);
-        training.setUser(userRepository.getOne(userId));
         return Optional.of(trainingRepository.save(training));
     }
 }

@@ -12,8 +12,17 @@ public class TrainingDTO {
     private Date trainingDate;
     private Boolean isDone;
     private String name;
+    private Integer duration;
     private List<ExersiseDTO> exersiseDTOList;
     private Long userId;
+
+    public Integer getDuration() {
+        return duration;
+    }
+
+    public void setDuration(Integer duration) {
+        this.duration = duration;
+    }
 
     public String getName() {
         return name;
