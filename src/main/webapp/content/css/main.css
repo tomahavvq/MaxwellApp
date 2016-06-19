@@ -151,3 +151,11 @@ ul#strengthBar {
 .calc-content p{
 
 }
+
+.textinbox {
+    position: relative;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    text-shadow: 3px 3px black;
+}
