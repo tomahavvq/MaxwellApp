@@ -166,3 +166,50 @@ ul#strengthBar {
     font-size: 40px;
     text-shadow: 3px 3px black;
 }
+
+.prod-table {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    background-color: lightgrey;
+    margin-bottom: 20px;
+}
+
+.prod-table-header {
+    font-size: 16pt;
+}
+
+.prod-table-content {
+    font-size: 14px;
+    border: 1pt solid;
+}
+
+.prod-table-content:hover {
+    background-color: #a3a3a3;
+}
+
+.prod-name {
+    padding: 5px 10px;
+    text-align: left;
+}
+
+.prod-ch {
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.prod-protein {
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.prod-fat {
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.prod-kcal {
+    padding: 5px 10px;
+    text-align: right;
+}
