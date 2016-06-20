@@ -66,10 +66,4 @@ public class TrainingCtrl {
                 .orElse(new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR));
     }
 
-    @RequestMapping(value = "/user/{userId}")
-    public ResponseEntity<TrainingDTO> getTraining(@PathVariable Long trainingId , @PathVariable Long userId) {
-        return trainingService.getTraining(trainingId)
-                .map(trainingDTO -> new ResponseEntity<>(trainingDTO, HttpStatus.OK))
-                .orElse(new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR));
-    }
 }

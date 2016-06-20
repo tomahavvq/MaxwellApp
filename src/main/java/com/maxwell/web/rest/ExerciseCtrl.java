@@ -29,12 +29,12 @@ public class ExerciseCtrl {
                 .orElse(new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR));
     }
 
-    @RequestMapping(value = "")
+    @RequestMapping(value = "" , method = RequestMethod.GET)
     public ResponseEntity<List<Exercise>> getAllExercises() {
         return new ResponseEntity<>( exerciseService.getAllExercise() , HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/bodyPart/{bodyPartDescription}")
+    @RequestMapping(value = "/bodyPart/{bodyPartDescription}" , method = RequestMethod.GET)
     public List<Exercise> getAllExercisesByBodyPart(@PathVariable String bodyPartDescription) {
         BodyPart bodyPart = new BodyPart();
         bodyPart.setDescription(bodyPartDescription);
