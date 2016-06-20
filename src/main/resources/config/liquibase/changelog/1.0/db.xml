@@ -123,9 +123,6 @@
             <column name="id" type="bigint" autoIncrement="true">
                 <constraints nullable="false" primaryKey="true"/>
             </column>
-            <column name="pace" type="int">
-                <constraints nullable="false"/>
-            </column>
             <column name="duration" type="int">
                 <constraints nullable="false"/>
             </column>
