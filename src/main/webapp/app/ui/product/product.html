@@ -2,11 +2,13 @@
 
     <table class="prod-table">
         <thead class="prod-table-header">
+        <tr>
             <td class="prod-name">Name</td>
             <td class="prod-ch">Carbohydrates</td>
             <td class="prod-protein">Protein</td>
             <td class="prod-fat">Fat</td>
             <td class="prod-kcal">Kcal</td>
+        </tr>
         </thead>
         <tr ng-repeat="x in products" class="prod-table-content">
             <td class="prod-name">{{ x.name }}</td>

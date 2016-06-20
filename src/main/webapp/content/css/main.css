@@ -172,8 +172,16 @@ ul#strengthBar {
     margin-left: auto;
     margin-right: auto;
     border-style: solid;
-    background-color: lightgrey;
+    background-color: #eee;
     margin-bottom: 20px;
+}
+.prod-table tr:nth-child(2n){
+    background-color: #ccc;
+}
+
+.prod-table .prod-table-header{
+    background-color: #888;
+    color: #fff;
 }
 
 .prod-table-header {
@@ -186,6 +194,10 @@ ul#strengthBar {
 }
 
 .prod-table-content:hover {
+    background-color: #a3a3a3;
+}
+
+.prod-table tr:nth-child(2n):hover{
     background-color: #a3a3a3;
 }
 
