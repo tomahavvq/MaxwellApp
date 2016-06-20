@@ -11,8 +11,6 @@
     StatsData.$inject = ['$resource'];
 
     function StatsData ($resource) {
-        return $resource('url/do/statystyk/:user', {}, {
-            'getAll': { method: 'GET', isArray: false}
-        });
-    }
+        return $resource('api/statistic/:id');
+    };
 })();

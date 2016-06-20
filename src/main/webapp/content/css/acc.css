@@ -109,14 +109,17 @@
 .atlas-exercise{
     height:450px;
     padding:20px;
-    background-color: rgba(255,255,255,0.5);
+
 
 }
-.atlas-img{
-    height:100%;
-    background-color: rgba(0,0,0,0.5)
+.atlas-img {
+    height: 100%;
+    background-color: black;
+    padding-top:28px;
 }
+
 .atlas-img img{
+
     margin:0 auto;
     width:100%;
     background-color: rgba(0,0,0,0.5)
@@ -155,3 +158,35 @@
     margin:0 auto;
 }
 
+.stats-block{
+    height:250px;
+    margin-top:5px;
+    padding:5px;
+}
+.stats-block h1 {
+    color:white;
+    margin-left:30px;
+}
+
+.stat-elem h2  {
+    color:black;
+    font-weight:bold;
+    text-align:center;
+    border-style:solid;
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+    border-color:black;
+}
+
+.stat-elem p  {
+    text-align:center;
+    font-size:50px;
+    line-height:90px;
+    color:white;
+}
+.stat-value {
+    margin-top:-10px;
+    height:100px;
+    background-color: rgba(0,0,0,0.3);
+}

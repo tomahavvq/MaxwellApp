@@ -15,18 +15,19 @@
     </div>
 
     <div class="container-fluid">
-        <div class="row calc-content">
+        <div class="row calc-content" >
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 dates-list">
                 <h3>Excerises List:</h3>
                 <div class="list fadeInLeft">
                     <div class = "atlas-button" ng-repeat="exercise in exercises" ng-click="getExerciseDetail(exercises.indexOf(exercise))">
                         {{exercise.name}}
+                        {{exercises.indexOf(exercise)}}
                     </div>
                 </div>
             </div>
             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                 <h3>Details</h3>
-                <div class="row atlas-exercise">
+                <div class="row atlas-exercise " >
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <div class="atlas-block fadeInRight">
                                 <h4> Name: </h4>
@@ -41,8 +42,7 @@
                             </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 atlas-img">
-                        <h4> Image: </h4>
-                            <img src="{{'content/images/atlas/exc_' +currentExercise.id + '.png'}}">
+                        <img src="{{'content/images/atlas/exc_' +currentExercise.id + '.png'}}">
                     </div>
                 </div>
 

@@ -3,14 +3,10 @@
 
     angular
         .module('maxwellApp')
-        .controller('TrainingController', StatsController);
+        .controller('StatsController', StatsController);
 
-    StatsController.$inject = ['$scope'];
-
-    function StatsController($scope) {
-        $scope.stats = StatsData.get({part: 'users',id: '1'});
-        $scope.hej = "DUPA";
-        $scope.chosenstat = false;
+    function StatsController($scope, StatsData) {
+        $scope.stats = StatsData.get({id: 1});
 
         $scope.choseStat = function(chosen){
             $scope.chosenstat = chosen;

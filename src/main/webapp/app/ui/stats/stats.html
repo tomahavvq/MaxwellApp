@@ -1,24 +1,64 @@
-<div>
-<div class="container-fluid" >
+<div class="container-fluid" ng-controller="StatsController as stats">
     <div class="row">
-        <nav class="navbar navbar-inverse stats-submenu">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a ng-class="{active:isStat(1)}" ng-click="choseStat(1)">
-                        Running Statistics
-                    </a>
-                </li>
-                <li>
-                    <a ng-class="{active:isStat(2)}" ng-click="choseStat(2)">
-                        Training Statistics
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="stats-block">
+                <h1>Weight lifting</h1>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 stat-elem">
+                    <h2> Sum of repetitions</h2>
+                    <div class="stat-value">
+                        <p>
+                            {{stats.sumOfRepetitions}}
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 stat-elem">
+                    <h2> Sum of all series </h2>
+                    <div class="stat-value">
+                        <p>
+                            {{stats.sumOfSeries}}
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 stat-elem">
+                    <h2> Sum of weight</h2>
+                    <div class="stat-value">
+                        <p>
+                            {{stats.sumOfWeight}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-<div class="row">
-
-</div>
-
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="stats-block">
+                <h1>Running</h1>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 stat-elem">
+                    <h2> Run duration </h2>
+                    <div class="stat-value">
+                        <p>
+                            {{stats.runDuration}}
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 stat-elem">
+                    <h2> Sum of the distance </h2>
+                    <div class="stat-value">
+                        <p>
+                            {{stats.runDistance}}
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 stat-elem">
+                    <h2> Average run pace</h2>
+                    <div class="stat-value">
+                        <p>
+                            {{stats.averageRunPace}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

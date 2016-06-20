@@ -10,16 +10,11 @@
         ;
 
     function atlasController($scope, ExerciseData){
-        $scope.currentExercise = [];
+        $scope.exercises = ExerciseData.query({bodyPart: 'chest'});
 
-        $scope.init = function(part){
-            $scope.exercises = ExerciseData.query({bodyPart: part});
-            $scope.currentExercise = $scope.exercises[0];
-        };
 
         $scope.getBodyPart = function(bodyId){
             $scope.exercises = ExerciseData.query({bodyPart: bodyId});
-
         };
 
         $scope.getExerciseDetail = function(number){

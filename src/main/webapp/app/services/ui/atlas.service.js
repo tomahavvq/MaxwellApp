@@ -11,7 +11,6 @@
     ExerciseData.$inject = ['$resource'];
 
     function ExerciseData ($resource) {
-        return $resource('api/exercise/bodyPart/:bodyPart')
-
+        return $resource('api/exercise/bodyPart/:bodyPart');
     }
 })();
