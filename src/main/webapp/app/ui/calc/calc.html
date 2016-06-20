@@ -24,11 +24,6 @@
                         </a>
                     </li>
                     <li>
-                        <a ng-class="{active:isChosen(5)}" ng-click="choseCalc(5)">
-                            Daily kilocalorie requirement
-                        </a>
-                    </li>
-                    <li>
                         <a ng-class="{active:calc.isChosen(6)}" ng-click="choseCalc(6)">
                             Recommended protein intake
                         </a>
@@ -105,7 +100,7 @@
 
         </div>
         <div ng-show="isChosen(6)">
-            <h2>Calculate daily            protein requirement</h2>
+            <h2>Calculate daily protein requirement</h2>
             <form>
                 <p>Activity:
 
@@ -139,16 +134,19 @@
                 So how much fluid does the average, healthy adult living in a temperate climate need? The Institute of Medicine determined that an adequate intake (AI) for men is roughly about 13 cups (3 liters) of total beverages a day. The AI for women is about 9 cups (2.2 liters) of total beverages a day.
             </div>
             <div ng-show="isChosen(3)">
-
+                Waist–hip ratio or waist-to-hip ratio (WHR) is the ratio of the circumference of the waist to that of the hips. This is calculated as waist measurement divided by hip measurement (W ÷ H). For example, a person with a 25″ (64 cm) waist and 38″ (97 cm) hips has a waist–hip ratio of about 0.66.
+                The WHR has been used as an indicator or measure of health, and the risk of developing serious health conditions. WHR correlates with fertility (with different optimal values for males and females). Some researchers have found that the waist-hip ratio is a significant measure of female attractiveness.
             </div>
             <div ng-show="isChosen(4)">
-
+                Ideal body weight (IBW) was initially introduced by Devine in 1974 to allow estimation of drug clearances in obese patients researchers have since shown that the metabolism of certain drugs relates more to IBW than total body weight. The term was based on the use of
+                insurance data that demonstrated the relative mortality for males and females according to different height–weight combinations.
             </div>
             <div ng-show="isChosen(5)">
 
             </div>
             <div ng-show="isChosen(6)">
-
+                Proteins are essential nutrients for the human body. They are one of the building blocks of body tissue, and can also serve as a fuel source. As a fuel, proteins contain 4 kcal (17 kJ) per gram, just like carbohydrates and unlike lipids, which contain 9 kcal (37 kJ) per gram. The most important aspect and defining characteristic of protein from
+                a nutritional standpoint is its amino acid composition.
             </div>
         </div>
     </div>
