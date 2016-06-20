@@ -1,13 +1,14 @@
-<div ng-controller="atlasController as atlas">
+<div ng-controller="atlasController as atlas" ng-init = "init('chest',1)" >
+    <div class="container-fluid">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <nav class="navbar navbar-inverse atlas-submenu">
                 <ul class="nav navbar-nav">
-                    <li><a ng-click="getBodyPart('KLATKA')">Chest</a></li>
-                    <li><a>Back</a></li>
-                    <li><a>Legs</a></li>
-                    <li><a>Shoulders</a></li>
-                    <li><a>Arms</a></li>
+                    <li><a ng-click="getBodyPart('chest')">Chest</a></li>
+                    <li><a ng-click="getBodyPart('back')">Back</a></li>
+                    <li><a ng-click="getBodyPart('legs')" >Legs</a></li>
+                    <li><a ng-click="getBodyPart('shoulders')">Shoulders</a></li>
+                    <li><a ng-click="getBodyPart('biceps')">Arms</a></li>
                 </ul>
             </nav>
         </div>
@@ -17,8 +18,8 @@
         <div class="row calc-content">
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 dates-list">
                 <h3>Excerises List:</h3>
-                <div class="list">
-                    <div class = "train-date" ng-repeat="exercise in exercises" ng-click="getExerciseDetail(exercises.indexOf(exercise))">
+                <div class="list fadeInLeft">
+                    <div class = "atlas-button" ng-repeat="exercise in exercises" ng-click="getExerciseDetail(exercises.indexOf(exercise))">
                         {{exercise.name}}
                     </div>
                 </div>
@@ -26,12 +27,12 @@
             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                 <h3>Details</h3>
                 <div class="row atlas-exercise">
-                    <div class="col-lg-4 col-md-4">
-                            <div class="atlas-block">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <div class="atlas-block fadeInRight">
                                 <h4> Name: </h4>
                                     {{currentExercise.name}}
                                 <h4> Body part: </h4>
-                                    {{currentExercise.bodyPart}}
+                                    {{currentExercise.bodyPart.description}}
                             </div>
 
                             <div class="atlas-descript">
@@ -39,13 +40,14 @@
                                     {{currentExercise.description}}
                             </div>
                     </div>
-                    <div class="col-lg-8 col-md-8 atlas-img">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 atlas-img">
                         <h4> Image: </h4>
-                            <img src="{{'content/images/atlas/exc_'+currentExercise.id + '.png'}}">
+                            <img src="{{'content/images/atlas/exc_' +currentExercise.id + '.png'}}">
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
+</div>
 </div>

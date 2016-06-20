@@ -6,14 +6,20 @@
 
     angular
         .module('maxwellApp')
-        .controller('atlasController', atlasController);
+        .controller('atlasController', atlasController)
+        ;
 
-    atlasController.$inject = ['ExerciseData', '$scope'];
+    function atlasController($scope, ExerciseData){
+        $scope.currentExercise = [];
 
-    function atlasController($scope) {
+        $scope.init = function(part){
+            $scope.exercises = ExerciseData.query({bodyPart: part});
+            $scope.currentExercise = $scope.exercises[0];
+        };
 
         $scope.getBodyPart = function(bodyId){
             $scope.exercises = ExerciseData.query({bodyPart: bodyId});
+
         };
 
         $scope.getExerciseDetail = function(number){

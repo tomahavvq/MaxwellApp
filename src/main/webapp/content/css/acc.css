@@ -107,13 +107,18 @@
     text-align:center;
 }
 .atlas-exercise{
-    height:400px;
+    height:450px;
     padding:20px;
     background-color: rgba(255,255,255,0.5);
 
 }
 .atlas-img{
     height:100%;
+    background-color: rgba(0,0,0,0.5)
+}
+.atlas-img img{
+    margin:0 auto;
+    width:100%;
     background-color: rgba(0,0,0,0.5)
 }
 
@@ -125,7 +130,26 @@
     color:black;
     height:60%;
 }
+.atlas-button{
+    padding:3px;
+    margin-bottom:3px;
+    font-weight:bold;
+    color:black;
+    min-height:40px;
+    line-height:30px;
+    text-align:center;
+    background-color:rgba(255,255,255, 0.8)
+}
+.atlas-button:hover{
 
+    color:grey;
+    cursor:pointer;
+
+}
+.atlas-button:focus{
+    background-color:rgba(0,0,0, 0.3);
+    color:white;
+}
 .stats-submenu{
     width:26%;
     margin:0 auto;

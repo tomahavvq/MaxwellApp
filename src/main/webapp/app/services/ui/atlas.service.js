@@ -1,6 +1,6 @@
 /**
  * Created by chevvson on 17.06.16.
- */
+// */
 (function() {
     'use strict';
 
@@ -11,8 +11,7 @@
     ExerciseData.$inject = ['$resource'];
 
     function ExerciseData ($resource) {
-        return $resource('url/do/ćwiczeń', {}, {
-            'getAll': { method: 'GET', isArray: false}
-        });
+        return $resource('api/exercise/bodyPart/:bodyPart')
+
     }
 })();
