@@ -8,6 +8,8 @@ import com.maxwell.service.PaceService;
 import com.maxwell.service.UserService;
 import com.maxwell.web.rest.dto.RunDTO;
 import com.maxwell.web.rest.mapper.RunMapper;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -55,6 +57,12 @@ public class RunService {
         Run run = runRepository.getOne(runId);
         return Optional.ofNullable(RunMapper.mapRunEntityToDTO(run));
 
+    }
+
+    @Transactional(readOnly = true)
+    public Page<Run> findAll(Pageable pageable) {
+        Page<Run> result = runRepository.findAll(pageable);
+        return result;
     }
 
 

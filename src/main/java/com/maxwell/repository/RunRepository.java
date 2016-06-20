@@ -10,4 +10,6 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface RunRepository extends JpaRepository<Run, Long>, QueryDslPredicateExecutor<Run> {
+
+
 }
