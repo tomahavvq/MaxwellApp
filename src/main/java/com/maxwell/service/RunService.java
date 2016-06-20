@@ -41,6 +41,7 @@ public class RunService {
         run.setDateTime(runDTO.getDateTime());
         run.setDuration(runDTO.getDuration());
         run.setName(runDTO.getName());
+        run.setDistance(runDTO.getDistance());
         run.setUser(user);
 
         run = runRepository.save(run);
