@@ -11,6 +11,8 @@ import com.maxwell.repository.UserRepository;
 import com.maxwell.web.rest.dto.ExersiseDTO;
 import com.maxwell.web.rest.dto.TrainingDTO;
 import com.maxwell.web.rest.mapper.TrainingMapper;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -101,5 +103,11 @@ public class TrainingService {
         }
         training.setExercises(exerciseDetailsList);
         return Optional.of(trainingRepository.save(training));
+    }
+
+    @Transactional(readOnly = true)
+    public Page<Training> findAll(Pageable pageable) {
+        Page<Training> result = trainingRepository.findAll(pageable);
+        return result;
     }
 }

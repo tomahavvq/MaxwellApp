@@ -1,0 +1,33 @@
+
+<div>
+    <h2><span>Training</span> {{vm.training.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal">
+        <dt><span>Duration</span></dt>
+        <dd>
+            <span>{{vm.training.duration}}</span>
+        </dd>
+        <hr>
+        <dt><span>Date</span></dt>
+        <dd>
+            <span>{{vm.training.trainingDate | date:'mediumDate'}}</span>
+        </dd>
+        <hr>
+        <dt><span>Name</span></dt>
+        <dd>
+            <span>{{vm.training.name}}</span>
+        </dd>
+    </dl>
+
+        <tr ng-repeat="training in vm.training.exersiseDTOList">
+            <td>{{training.repeatation}}</td>
+            <td>{{training.dateTime | date:'mediumDate'}}</td>
+            <td>{{training.name}}</td>
+        </tr>
+    <hr>
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+</div>

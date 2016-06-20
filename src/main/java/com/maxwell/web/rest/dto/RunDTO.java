@@ -1,6 +1,7 @@
 package com.maxwell.web.rest.dto;
 
 import java.sql.Date;
+import java.time.LocalDate;
 
 /**
  * Created by tomahavvq on 14.05.16.
@@ -11,7 +12,7 @@ public class RunDTO {
     private Integer[] pace;
     private Double[][] coordinates;
     private Integer duration;
-    private Date dateTime;
+    private LocalDate dateTime;
     private String name;
     private Integer distance;
 
@@ -47,11 +48,11 @@ public class RunDTO {
         this.duration = duration;
     }
 
-    public Date getDateTime() {
+    public LocalDate getDateTime() {
         return dateTime;
     }
 
-    public void setDateTime(Date dateTime) {
+    public void setDateTime(LocalDate dateTime) {
         this.dateTime = dateTime;
     }
 

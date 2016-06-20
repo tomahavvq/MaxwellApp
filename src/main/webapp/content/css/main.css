@@ -74,6 +74,9 @@ a:hover{
     background-image:url(./../images/bmi.jpg);
 
 }
+.run{
+    background-image: url(./../images/run.jpg);
+}
 /* start Password strength bar style */
 ul#strengthBar {
     display:inline;

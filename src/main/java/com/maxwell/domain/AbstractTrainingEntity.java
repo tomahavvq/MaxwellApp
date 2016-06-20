@@ -5,6 +5,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Date;
+import java.time.LocalDate;
 
 /**
  * Created by tomahavvq on 14.05.16.
@@ -22,7 +23,7 @@ public abstract class AbstractTrainingEntity implements Serializable {
 
     @DateTimeFormat
     @Column(name="date_time")
-    private Date dateTime;
+    private LocalDate dateTime;
 
     @Column(name="name")
     private String name;
@@ -47,11 +48,11 @@ public abstract class AbstractTrainingEntity implements Serializable {
         this.duration = duration;
     }
 
-    public Date getDateTime() {
+    public LocalDate getDateTime() {
         return dateTime;
     }
 
-    public void setDateTime(Date dateTime) {
+    public void setDateTime(LocalDate dateTime) {
         this.dateTime = dateTime;
     }
 

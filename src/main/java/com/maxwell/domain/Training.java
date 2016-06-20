@@ -15,7 +15,7 @@ public class Training extends AbstractTrainingEntity{
     @Column(name="is_done")
     private Boolean isDone = Boolean.FALSE;
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "training")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "training")
     private List<ExerciseDetails> exercises;
 
     public Boolean getDone() {

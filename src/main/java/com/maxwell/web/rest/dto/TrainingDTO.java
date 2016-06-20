@@ -1,6 +1,6 @@
 package com.maxwell.web.rest.dto;
 
-import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -9,7 +9,7 @@ import java.util.List;
 public class TrainingDTO {
 
     private Long id;
-    private Date trainingDate;
+    private LocalDate trainingDate;
     private Boolean isDone;
     private String name;
     private Integer duration;
@@ -48,11 +48,11 @@ public class TrainingDTO {
         this.id = id;
     }
 
-    public Date getTrainingDate() {
+    public LocalDate getTrainingDate() {
         return trainingDate;
     }
 
-    public void setTrainingDate(Date trainingDate) {
+    public void setTrainingDate(LocalDate trainingDate) {
         this.trainingDate = trainingDate;
     }
 
