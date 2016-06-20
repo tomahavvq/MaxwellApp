@@ -10,10 +10,10 @@ import java.util.List;
 @Table
 public class Run extends AbstractTrainingEntity {
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "run")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "run")
     private List<Pace> paceList;
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "run")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "run")
     private List<Coordinate> coordinates;
 
     @Column
