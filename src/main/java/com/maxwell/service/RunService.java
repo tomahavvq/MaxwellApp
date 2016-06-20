@@ -61,7 +61,7 @@ public class RunService {
 
     @Transactional(readOnly = true)
     public Page<Run> findAll(Pageable pageable) {
-        Page<Run> result = runRepository.findAll(pageable);
+        Page<Run> result = runRepository.findByUserIsCurrentUser(pageable);
         return result;
     }
 

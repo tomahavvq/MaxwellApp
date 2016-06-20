@@ -107,7 +107,7 @@ public class TrainingService {
 
     @Transactional(readOnly = true)
     public Page<Training> findAll(Pageable pageable) {
-        Page<Training> result = trainingRepository.findAll(pageable);
+        Page<Training> result = trainingRepository.findByUserIsCurrentUser(pageable);
         return result;
     }
 }
